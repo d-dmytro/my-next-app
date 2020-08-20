@@ -1,8 +1,10 @@
+import Layout from '../../components/Layout';
+
 const Products = () => {
   return (
-    <div>
+    <Layout>
       <h1>Products</h1>
-    </div>
+    </Layout>
   );
 };
 

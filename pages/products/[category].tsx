@@ -1,12 +1,13 @@
 import { useRouter } from 'next/router';
+import Layout from '../../components/Layout';
 
 const ProductCategory = () => {
   const router = useRouter();
   return (
-    <div>
+    <Layout>
       <h1>Category {router.query.category}</h1>
       <button onClick={() => router.push('/')}>Homepage</button>
-    </div>
+    </Layout>
   );
 };
 

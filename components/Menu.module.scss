@@ -1,0 +1,13 @@
+$border: 1px solid #ccc;
+$padding: 8px;
+
+.menu {
+  border: $border;
+  list-style: none;
+  padding: $padding;
+  display: flex;
+}
+
+.menu li {
+  margin: 0 10px;
+}
