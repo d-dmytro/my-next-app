@@ -1,11 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import mysql from 'mysql';
-import db from '../../lib/db';
+import db, { getAllPosts } from '../../../lib/db';
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method === 'GET') {
-    const posts = await db.query('SELECT * FROM posts');
-    await db.end();
+    const posts = await getAllPosts();
     res.statusCode = 200;
     res.json(posts);
   } else if (req.method === 'POST') {

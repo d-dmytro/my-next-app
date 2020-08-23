@@ -9,4 +9,16 @@ const db = mysql({
   },
 });
 
+interface Post {
+  id: number;
+  title: string;
+  content: string;
+}
+
+export const getAllPosts = async () => {
+  const posts = await db.query<Post[]>('SELECT * FROM posts ORDER BY id DESC');
+  await db.end();
+  return posts.map(({ id, title, content }) => ({ id, title, content }));
+};
+
 export default db;
