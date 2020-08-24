@@ -30,6 +30,11 @@ export default function Home(
           );
         })}
       </ul>
+      <p>
+        <Link href="/create-post">
+          <a>Create a Post</a>
+        </Link>
+      </p>
     </Layout>
   );
 }
