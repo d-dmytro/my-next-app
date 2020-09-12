@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import Layout from '../components/Layout';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 interface Values {
   title: string;
@@ -12,6 +13,9 @@ const CreatePost = () => {
   const router = useRouter();
   return (
     <Layout>
+      <Head>
+        <title>Create a Post</title>
+      </Head>
       <form
         onSubmit={handleSubmit(async (values) => {
           await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/posts`, {

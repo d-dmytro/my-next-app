@@ -3,12 +3,16 @@ import Layout from '../../components/Layout';
 import { GetStaticProps, InferGetStaticPropsType, GetStaticPaths } from 'next';
 import { getPostById, getAllPosts } from '../../lib/db';
 import { Post } from '../../types';
+import Head from 'next/head';
 
 const SinglePost = ({
   post,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout>
+      <Head>
+        <title>{post.title}</title>
+      </Head>
       <h1>{post.title}</h1>
       <div>{post.content}</div>
     </Layout>
