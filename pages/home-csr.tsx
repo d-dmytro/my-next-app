@@ -24,7 +24,7 @@ export default function Home3() {
 
       <h1>Welcome to Homepage</h1>
 
-      <h2>TIMESTAMP: {Date.now()}</h2>
+      {/* <h2>TIMESTAMP: {Date.now()}</h2> */}
 
       <h2>Latest Posts</h2>
 
