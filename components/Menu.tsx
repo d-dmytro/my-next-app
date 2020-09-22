@@ -5,6 +5,11 @@ const Menu = () => {
   return (
     <ul className={MenuCSS.menu}>
       <li>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/products/">
           <a>Products</a>
         </Link>
