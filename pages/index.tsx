@@ -14,7 +14,7 @@ export default function Home(
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Welcome to Homepage</h1>
+      <h1>Welcome to Homepage (NEW)</h1>
 
       {/* <h2>TIMESTAMP: {Date.now()}</h2> */}
 
